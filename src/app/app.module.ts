@@ -1,18 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, LOCALE_ID } from '@angular/core';
+//import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DomseguroPipe
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [/*{provide: LOCALE_ID, useValue: "es"}*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
